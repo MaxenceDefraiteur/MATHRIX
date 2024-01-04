@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mathrix</title>
+	<!-- Linking the external JavaScript file -->
+	<script src="engine.js" defer></script>
+	<style>
+		
+		html, body {
+			background: black;
+			text-align: center;
+		}
+		
+		#cont {
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 150px;
+		}
+		
+		input {
+			display: inline-block;
+			padding: 5pt;
+			margin: 0 auto;
+			width: 90%;
+			float: left;
+			height: 30px;
+			font-family: 'consolas';
+			font-size: 20pt;
+			border: none;
+			background: black;
+			color:white;
+			caret-color: rgb(0, 255, 0);
+			color: rgb(0, 255, 0);
+			caret-shape: block;
+		}
+		
+		input:focus{
+			outline: none;
+		}
+		
+		span {
+			float: left;
+			padding: 5pt;
+			color: rgb(0, 255, 0);
+			font-family: 'consolas';
+			font-size: 20pt;
+			height: 30px;
+			display: inline-block;
+		}
+		
+		div.contentree {
+			position: relative;
+			display: inline-block;
+		}
+		
+		#cont {
+			animation: fadeInAnimation 5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes fadeInAnimation {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div id="cont">
+		<canvas id="ecran" width="20" height="20"></canvas>
+		<div id="contentree">
+			<span>&gt;</span>
+			<input id="entree">
+		</div>
+	</div>
+</body>
+
+</html>
