@@ -17,7 +17,7 @@
 		#cont {
 			display: inline-block;
 			margin: 0 auto;
-			margin-top: 150px;
+			margin-top: 50px;
 		}
 		
 		input {
@@ -55,6 +55,16 @@
 			position: relative;
 			display: inline-block;
 		}
+
+		a.lien {
+			font-size: 36px; /* Taille de la police augmentée */
+			font-family: 'consolas';
+			color: white;
+			background-color: black;
+			margin-top: 30px;
+			text-decoration: underline;
+			border-radius: 5px;
+		}
 		
 		#cont {
 			animation: fadeInAnimation 5s;
@@ -75,6 +85,7 @@
 </head>
 
 <body>
+	<div id="linkholder"> </div>
 	<div id="cont">
 		<canvas id="ecran" width="20" height="20"></canvas>
 		<div id="contentree">
@@ -82,6 +93,7 @@
 			<input id="entree">
 		</div>
 	</div>
+	
 </body>
 
 </html>
