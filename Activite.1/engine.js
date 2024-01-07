@@ -106,6 +106,10 @@ const MSG_DUREE_LONGUE = 10;
 
 let image_affichee; // L'image affichée au centre de l'écran, si bien qu'elle ne soit pas null.
 
+// Décalage de l'image affichée
+let image_dx = 0;
+let image_dy = 0; // pas utilisé pr l'instant
+
 let stop_rain = false; // Qui décide si oui ou non lors de l'arrivée en bas du curseur de rafraîchissement la pluie doit s'arrêter.
 let cols_stop; // L'arrêt progressif de chaque colonne puisque chacune possède son rythme d'arrêt.
 
@@ -248,7 +252,6 @@ function arreter() {
 function reprendre() {
 	stop_rain = false;
 }
-
 function commande(cmd) {
 	if (cmd == 'infecter') {
 		couleur_defaut = [255, 0, 0];
@@ -258,10 +261,8 @@ function commande(cmd) {
 		arreter();
 	} else if (cmd == 'reprendre') {
 		reprendre();
-	} else if (cmd == 'couleurAttenuer') {
+	} else if (cmd == 'attenuer couleur') {
 		couleurAttenuer();
-	} else if (cmd == 'cacher') {
-		cacherImage();
 	} else if (cmd == 'prenom') {
 		demanderPrenom();
 	} else if (cmd == 'aide0') {
@@ -270,47 +271,87 @@ function commande(cmd) {
 		afficherImage('intro.png');
 		//textePersistant("Introduction",0,1);
 	} else if (cmd == 'jour1') {
-		// textePersistant("Jour 1 :\nSystème décimal\net système binaire",0,1);
+		 cacherImage();
+		 textePersistant("Jour 1 :\nSystème décimal\net système binaire",0,1);
 		//couleurAttenuer();
 		afficherImage('jour1.png');
 	} else if (cmd == 'jour2') {
-		// textePersistant("Jour 2 :\nDécomposer un nombre décimal",0,1);
+		cacherImage();
+		 textePersistant("Jour 2 :\nDécomposer un nombre décimal",0,1);
 		//couleurAttenuer();
 		afficherImage('jour2.png');
 	} else if (cmd == 'jour3') {
-		// textePersistant("Jour 3 :\nConvertir un nombre décimal en nombre binaire",0,1);
+		cacherImage();
+		 textePersistant("Jour 3 :\nConvertir un nombre décimal\nen nombre binaire",0,1);
 		//couleurAttenuer();
 		afficherImage('jour3.png');
 	} else if (cmd == 'tableaudeconversionde12') {
-		// textePersistant("Tableau de conversion du nombre décimal 12",0,1);
+		cacherImage();
+		 textePersistant("Tableau de conversion du nombre décimal 12",0,1);
 		//couleurAttenuer();
 		afficherImage('tableaudeconversionde12.png');
 	} else if (cmd == 'jour4') {
-		// textePersistant("Jour 4 :\nConvertir un nombre binaire en nombre décimal",0,1);
+		cacherImage();
+		 textePersistant("Jour 4 :\nConvertir un nombre binaire\nen nombre décimal",0,1);
 		//couleurAttenuer();
 		afficherImage('jour4.png');
 	} else if (cmd == 'jour5') {
-		// textePersistant("Jour 5 :\nAffichage d'un octet",0,1);
+		cacherImage();
+		 textePersistant("Jour 5 :\nAffichage d'un octet",0,1);
 		//couleurAttenuer();
 		afficherImage('jour5.png');
 	} else if (cmd == 'jour6') {
-		// textePersistant("Jour 6 :\nGrandeur quotient",0,1);
+		cacherImage();
+		 textePersistant("Jour 6 :\nGrandeur quotient",0,1);
 		//couleurAttenuer();
 		afficherImage('jour6.png');
 	} else if (cmd == 'pb1') {
-		// textePersistant("Une base, dans un système de numération positionnel, est le nombre de symboles (de chiffres) qui sont utilisés pour représenter les nombres.",0,1);
+		cacherImage();
+		textePersistant("Pense-bête 1",0,1);
+		// textePersistant("Une base, dans un système de numération\npositionnel, est le nombre de symboles\n (de chiffres) qui sont utilisés\npour représenter les nombres.",0,1);
+		 afficherImage('pb2.png');
 	} else if (cmd == 'pb2') {
+		cacherImage();
+		textePersistant("Pense-bête 2",0,1);
 		// textePersistant("Puissances d'exposants positifs",0,1);
 		afficherImage('pb2.png');
 	} else if (cmd == 'pb3') {
+		cacherImage();
+		textePersistant("Pense-bête 3",0,1);
 		// textePersistant("Puissances d'exposants positifs",0,1);
 		afficherImage('pb3.png');
 	} else if (cmd == 'pb4') {
-		// textePersistant("Tableau de correspondance entre puissance de 10 et mesures en octets",0,1);
+		cacherImage();
+		textePersistant("Pense-bête 4",0,1);
+		 //textePersistant("Tableau de correspondance entre puissance de 10 et mesures en octets",0,1);
 		afficherImage('pb4.png');
 	} else if (cmd == 'pb5') {
+		cacherImage();
+		textePersistant("Pense-bête 5",0,1);
 		// textePersistant("Un nombre décimal est un nombre qui s’écrit avec nombre fini de chiffres apr`es la virgule en  ́ecriture d ́ecimale positionnelle. Les nombres décimaux sont les quotients d’entiers par les puissances de 10.",0,1);
-	} 			
+	} else if (cmd == 'lien') {
+		 textePersistant("Programme Scratch.",0,1);
+		 afficherLien();
+	} else if (cmd == 'cacher lien') {
+		 cacherLien();
+	} 					
+}
+
+function afficherLien() {
+  var lien = document.createElement("a");
+
+  var texte = document.createTextNode("Cliquez ici pour obtenir le programme Scratch");
+  lien.appendChild(texte);
+  lien.href = "https://scratch.mit.edu/projects/947390316/editor/";
+
+  // ID ajouté pour le style
+  lien.classList.add("lien");
+  
+  document.getElementById("linkholder").appendChild(lien);
+}
+
+function cacherLien() {
+  document.getElementById('linkholder').innerHTML = '';
 }
 
 
@@ -438,7 +479,14 @@ function draw(){
 		}
 	}
 	if (image_affichee != null) {
-		ctx.drawImage(image_affichee, w / 2 - image_affichee.width / 2, h / 2 - image_affichee.height / 2);
+		let left_y_space = h - (h / 2 - image_affichee.height / 2 + image_dy);
+		if (image_affichee.height > left_y_space) {
+			let modimagew = image_affichee.width * left_y_space / image_affichee.height;
+			ctx.drawImage(image_affichee, w / 2 - modimagew / 2 + image_dx, h - left_y_space, modimagew, left_y_space);
+			console.log('prout');
+		} else {
+			ctx.drawImage(image_affichee, w / 2 - image_affichee.width / 2 + image_dx, h / 2 - image_affichee.height / 2 + image_dy);
+		}
 	}
 	
 }
@@ -473,6 +521,15 @@ function textePersistant(texte, x, y) {
 	}
 }
 
+function resetPermPrint() {
+    for (let x = 0; x < rain_w; x++) {
+        for (let y = 0; y < rain_h; y++) {
+            mandatory_print_perm[x][y] = null;
+        }
+    }
+}
+
+
 function textePersistant2(texte, x, y) {
     let lignes = texte.split('\n');
 
@@ -492,17 +549,33 @@ function textePersistant2(texte, x, y) {
 
 
 function afficherImage(imgsrc) {
+	
 	const img = new Image(); // Create new img element
+	img.src = "./res/" + imgsrc;
 	img.addEventListener(
 		"load",
 		() => {
 			image_affichee = img;
+			
+			let lowest_perm_char_baseline = 0;
+			image_dy = 0;
+			for (let y = 0; y < rain_h; y++) {
+				for (let x = 0; x < rain_w; x++) {
+					if (mandatory_print_perm[x][y] != null) {
+						lowest_perm_char_baseline = (y+1) * ch + 10;
+					}
+				}
+			}
+			if (lowest_perm_char_baseline > h / 2 - image_affichee.height / 2) {
+				image_dy = lowest_perm_char_baseline - (h / 2 - image_affichee.height / 2);
+			}
+			
 		},
 		false,
 	);
-	img.src = "./res/" + imgsrc;
 }
 
 function cacherImage() {
 	image_affichee = null;
+	resetPermPrint();
 }
