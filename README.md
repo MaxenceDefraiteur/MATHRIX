@@ -3,6 +3,4 @@ Dans le cadre de l'écriture de la partie expérimentale de mon mémoire en mast
 - [Activité 1](./Activite.1/index.html)
 - [Activité 2](./Activite.2/index.html) + [Programmes Scratch](https://scratch.mit.edu/projects/947390316/editor/)
 
-<video controls autoplay>
-  <source src='./Activite.1/tutoriels/tutoriel.activite.1.mp4' width=180/>
-</video>
+![video](./Activite.1/tutoriels/tutoriel.activite.1.mp4)
