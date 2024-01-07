@@ -268,6 +268,8 @@ function commande(cmd) {
 	} else if (cmd == 'aide0') {
 		textePersistant("Consulte le journal de bord\ndu capitaine.\nDans le désordre si\ntu veux.\n(sauf pour le Jour5)",3,3);
 	} else if (cmd == 'intro') {
+		cacherImage();
+		textePersistant("Introduction",0,1);
 		afficherImage('intro.png');
 		//textePersistant("Introduction",0,1);
 	} else if (cmd == 'jour1') {
