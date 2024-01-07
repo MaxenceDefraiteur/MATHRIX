@@ -2,5 +2,7 @@ Dans le cadre de l'écriture de la partie expérimentale de mon mémoire en mast
 
 - [Activité 1](./Activite.1/index.html)
 - [Activité 2](./Activite.2/index.html) + [Programmes Scratch](https://scratch.mit.edu/projects/947390316/editor/)
+  
+<video src="./Activite.1/tutoriels/tutoriel.activite.1.mp4" controls="controls" style="max-width: 730px;">
+</video>
 
-![video](./Activite.1/tutoriels/tutoriel.activite.1.mp4)
