@@ -10,6 +10,7 @@ Dans le cadre de l'écriture de la partie expérimentale de mon mémoire en mast
 - [Manuel activité 1](./Activite.1/documents.annexes/manuel.activite.1.pdf)
 - [Travail de Recherche](./Activite.1/documents.annexes/Travail.de.Recherche.pdf)
 - [Réponses succinctes](./Activite.1/documents.annexes/Reponses.Succinctes.pdf)
+- [Retour d'expérience](./Activite.1/documents.annexes/Retour.d.experience.a5.pdf)
 
 # Tutoriel : exemples de commandes dans l'activité 1
 <video src="./Activite.1/tutoriels/tutoriel.activite.1.mp4" controls="controls" style="max-width: 730px;">
