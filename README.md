@@ -6,7 +6,7 @@ Dans le cadre de l'écriture de la partie expérimentale de mon mémoire en mast
 - [Activité 2](./Activite.2/index.html) + [Programmes Scratch](https://scratch.mit.edu/projects/947390316/editor/)
 
 # Supports des élèves (.pdf)
-- [Presentation en salle info](./Activite.1/documents.annexes/presentation.salle.info.pdf) + [.odp](./Activite.1/presentation.salle.info.odp)
+- [Presentation en salle info](./Activite.1/documents.annexes/presentation.salle.info.pdf) + [.odp](./Activite.1/presentation.salle.info.odp) + [pres.v2.pdf](./Activite.1/documents.annexes/presentation.salle.info.v2.pdf)
 - [Manuel activité 1](./Activite.1/documents.annexes/manuel.activite.1.pdf)
 - [Travail de Recherche](./Activite.1/documents.annexes/Travail.de.Recherche.pdf)
 - [Réponses succinctes](./Activite.1/documents.annexes/Reponses.Succinctes.pdf)
