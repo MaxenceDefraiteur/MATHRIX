@@ -1,7 +1,7 @@
 # Contexte
 Dans le cadre de l'écriture de la partie expérimentale de mon mémoire en master MEÉF, j'ai décidé de créer deux activités autour de l'univers du film Matrix. Le principe se base sur l'exécution de commandes dans une simulation d'invité de commande. Les élèves doivent exécuter des commandes pour afficher des contenus théoriques, des questions. Les questions sont formulées comme des défis donnés par le capitaine du vaisseau. 
 
-# Liens vers sites web des activités (.html)
+# Liens vers les sites web des activités (.html)
 - [Activité 1](./Activite.1/index.html)
 - [Activité 2](./Activite.2/index.html) + [Programmes Scratch](https://scratch.mit.edu/projects/947390316/editor/)
 
